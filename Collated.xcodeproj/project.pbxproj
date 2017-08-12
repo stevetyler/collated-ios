@@ -7,21 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024B3ADC1F3EA7330090B79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024B3ADB1F3EA7330090B79E /* Main.storyboard */; };
+		025B25721F3F6F3E00C866D6 /* Safari Share Example.png in Resources */ = {isa = PBXBuildFile; fileRef = 025B25711F3F6F3E00C866D6 /* Safari Share Example.png */; };
 		028560AE1F3E71F000B2CE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560AD1F3E71F000B2CE53 /* AppDelegate.swift */; };
-		028560B01F3E71F000B2CE53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560AF1F3E71F000B2CE53 /* ViewController.swift */; };
-		028560B31F3E71F000B2CE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028560B11F3E71F000B2CE53 /* Main.storyboard */; };
 		028560B51F3E71F000B2CE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028560B41F3E71F000B2CE53 /* Assets.xcassets */; };
 		028560B81F3E71F000B2CE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028560B61F3E71F000B2CE53 /* LaunchScreen.storyboard */; };
+		028560C61F3E72B100B2CE53 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560C51F3E72B100B2CE53 /* ShareViewController.swift */; };
+		028560C91F3E72B100B2CE53 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028560C71F3E72B100B2CE53 /* MainInterface.storyboard */; };
+		028560CD1F3E72B100B2CE53 /* Share Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 028560C31F3E72B100B2CE53 /* Share Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		028560D91F3E73DC00B2CE53 /* AuthenticationCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560D61F3E73DC00B2CE53 /* AuthenticationCompletedViewController.swift */; };
+		028560DA1F3E73DC00B2CE53 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560D71F3E73DC00B2CE53 /* AuthenticationViewController.swift */; };
+		028560DB1F3E73DC00B2CE53 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560D81F3E73DC00B2CE53 /* InitialViewController.swift */; };
+		028560DF1F3E740C00B2CE53 /* CollatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560DE1F3E740C00B2CE53 /* CollatedClient.swift */; };
+		028560E21F3E747800B2CE53 /* Background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 028560E11F3E747800B2CE53 /* Background.jpeg */; };
+		028560E31F3E749800B2CE53 /* CollatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560DE1F3E740C00B2CE53 /* CollatedClient.swift */; };
+		30F6D7D8326053D3E9B00236 /* Pods_Share_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E700611B4709CC3AEF5B16A /* Pods_Share_Extension.framework */; };
+		34F7C32DB0BEA716005A77D7 /* Pods_Collated.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E826A2BDC5E85E746377732D /* Pods_Collated.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		028560CB1F3E72B100B2CE53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 028560A21F3E71F000B2CE53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 028560C21F3E72B100B2CE53;
+			remoteInfo = "Share Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		028560D11F3E72B100B2CE53 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				028560CD1F3E72B100B2CE53 /* Share Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		024B3ADB1F3EA7330090B79E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		025B25711F3F6F3E00C866D6 /* Safari Share Example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Safari Share Example.png"; sourceTree = "<group>"; };
 		028560AA1F3E71F000B2CE53 /* Collated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028560AD1F3E71F000B2CE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		028560AF1F3E71F000B2CE53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		028560B21F3E71F000B2CE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		028560B41F3E71F000B2CE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		028560B71F3E71F000B2CE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		028560B91F3E71F000B2CE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		028560C31F3E72B100B2CE53 /* Share Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Share Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		028560C51F3E72B100B2CE53 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		028560C81F3E72B100B2CE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		028560CA1F3E72B100B2CE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		028560D21F3E72CB00B2CE53 /* Share Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Share Extension.entitlements"; sourceTree = "<group>"; };
+		028560D31F3E72D700B2CE53 /* Collated.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Collated.entitlements; sourceTree = "<group>"; };
+		028560D61F3E73DC00B2CE53 /* AuthenticationCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationCompletedViewController.swift; sourceTree = "<group>"; };
+		028560D71F3E73DC00B2CE53 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		028560D81F3E73DC00B2CE53 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		028560DE1F3E740C00B2CE53 /* CollatedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollatedClient.swift; sourceTree = "<group>"; };
+		028560E11F3E747800B2CE53 /* Background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpeg; sourceTree = "<group>"; };
+		02BB558C06A245E3BAD588DF /* Pods-Share Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share Extension/Pods-Share Extension.release.xcconfig"; sourceTree = "<group>"; };
+		0E700611B4709CC3AEF5B16A /* Pods_Share_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Share_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		355BF332DA103F5A253C628C /* Pods-Collated.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collated.release.xcconfig"; path = "Pods/Target Support Files/Pods-Collated/Pods-Collated.release.xcconfig"; sourceTree = "<group>"; };
+		5B3BF11A6E179B77EAA5C7A1 /* Pods-Collated.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collated.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Collated/Pods-Collated.debug.xcconfig"; sourceTree = "<group>"; };
+		D26852F9D4EAE3FDCF575EB9 /* Pods-Share Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Share Extension/Pods-Share Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		E826A2BDC5E85E746377732D /* Pods_Collated.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Collated.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +81,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F7C32DB0BEA716005A77D7 /* Pods_Collated.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		028560C01F3E72B100B2CE53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30F6D7D8326053D3E9B00236 /* Pods_Share_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				028560AC1F3E71F000B2CE53 /* Collated */,
+				028560C41F3E72B100B2CE53 /* Share Extension */,
 				028560AB1F3E71F000B2CE53 /* Products */,
+				A9A1A41EA22E2D2542E719B5 /* Pods */,
+				17A1D826B7A43395B16CC5C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				028560AA1F3E71F000B2CE53 /* Collated.app */,
+				028560C31F3E72B100B2CE53 /* Share Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +119,91 @@
 		028560AC1F3E71F000B2CE53 /* Collated */ = {
 			isa = PBXGroup;
 			children = (
+				028560DC1F3E73E900B2CE53 /* Resources */,
+				028560D41F3E73B100B2CE53 /* User Interface */,
 				028560AD1F3E71F000B2CE53 /* AppDelegate.swift */,
-				028560AF1F3E71F000B2CE53 /* ViewController.swift */,
-				028560B11F3E71F000B2CE53 /* Main.storyboard */,
-				028560B41F3E71F000B2CE53 /* Assets.xcassets */,
-				028560B61F3E71F000B2CE53 /* LaunchScreen.storyboard */,
-				028560B91F3E71F000B2CE53 /* Info.plist */,
+				028560DE1F3E740C00B2CE53 /* CollatedClient.swift */,
 			);
 			path = Collated;
+			sourceTree = "<group>";
+		};
+		028560C41F3E72B100B2CE53 /* Share Extension */ = {
+			isa = PBXGroup;
+			children = (
+				028560E01F3E741000B2CE53 /* Resources */,
+				028560C51F3E72B100B2CE53 /* ShareViewController.swift */,
+				028560C71F3E72B100B2CE53 /* MainInterface.storyboard */,
+			);
+			path = "Share Extension";
+			sourceTree = "<group>";
+		};
+		028560D41F3E73B100B2CE53 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				028560DD1F3E73F800B2CE53 /* Storyboards */,
+				028560D51F3E73CA00B2CE53 /* View Controllers */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		028560D51F3E73CA00B2CE53 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				028560D81F3E73DC00B2CE53 /* InitialViewController.swift */,
+				028560D61F3E73DC00B2CE53 /* AuthenticationCompletedViewController.swift */,
+				028560D71F3E73DC00B2CE53 /* AuthenticationViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		028560DC1F3E73E900B2CE53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				025B25711F3F6F3E00C866D6 /* Safari Share Example.png */,
+				028560E11F3E747800B2CE53 /* Background.jpeg */,
+				028560D31F3E72D700B2CE53 /* Collated.entitlements */,
+				028560B91F3E71F000B2CE53 /* Info.plist */,
+				028560B41F3E71F000B2CE53 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		028560DD1F3E73F800B2CE53 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				024B3ADB1F3EA7330090B79E /* Main.storyboard */,
+				028560B61F3E71F000B2CE53 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		028560E01F3E741000B2CE53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				028560D21F3E72CB00B2CE53 /* Share Extension.entitlements */,
+				028560CA1F3E72B100B2CE53 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		17A1D826B7A43395B16CC5C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E826A2BDC5E85E746377732D /* Pods_Collated.framework */,
+				0E700611B4709CC3AEF5B16A /* Pods_Share_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9A1A41EA22E2D2542E719B5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B3BF11A6E179B77EAA5C7A1 /* Pods-Collated.debug.xcconfig */,
+				355BF332DA103F5A253C628C /* Pods-Collated.release.xcconfig */,
+				D26852F9D4EAE3FDCF575EB9 /* Pods-Share Extension.debug.xcconfig */,
+				02BB558C06A245E3BAD588DF /* Pods-Share Extension.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,18 +213,42 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 028560BC1F3E71F000B2CE53 /* Build configuration list for PBXNativeTarget "Collated" */;
 			buildPhases = (
+				A29E55C01018A5A4AD208CAC /* [CP] Check Pods Manifest.lock */,
 				028560A61F3E71F000B2CE53 /* Sources */,
 				028560A71F3E71F000B2CE53 /* Frameworks */,
 				028560A81F3E71F000B2CE53 /* Resources */,
+				028560D11F3E72B100B2CE53 /* Embed App Extensions */,
+				E446A7A538B2DCA7C9C052E9 /* [CP] Embed Pods Frameworks */,
+				B13901B37EA277EC0AB98FA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				028560CC1F3E72B100B2CE53 /* PBXTargetDependency */,
 			);
 			name = Collated;
 			productName = Collated;
 			productReference = 028560AA1F3E71F000B2CE53 /* Collated.app */;
 			productType = "com.apple.product-type.application";
+		};
+		028560C21F3E72B100B2CE53 /* Share Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 028560CE1F3E72B100B2CE53 /* Build configuration list for PBXNativeTarget "Share Extension" */;
+			buildPhases = (
+				AFBE038F8F709EAAC78BDC2C /* [CP] Check Pods Manifest.lock */,
+				028560BF1F3E72B100B2CE53 /* Sources */,
+				028560C01F3E72B100B2CE53 /* Frameworks */,
+				028560C11F3E72B100B2CE53 /* Resources */,
+				7F8EE8D2A39F49B6D99E6517 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Share Extension";
+			productName = "Share Extension";
+			productReference = 028560C31F3E72B100B2CE53 /* Share Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +264,27 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = KQQJ9HW7KF;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					028560C21F3E72B100B2CE53 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = KQQJ9HW7KF;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -115,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				028560A91F3E71F000B2CE53 /* Collated */,
+				028560C21F3E72B100B2CE53 /* Share Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -126,39 +314,147 @@
 			files = (
 				028560B81F3E71F000B2CE53 /* LaunchScreen.storyboard in Resources */,
 				028560B51F3E71F000B2CE53 /* Assets.xcassets in Resources */,
-				028560B31F3E71F000B2CE53 /* Main.storyboard in Resources */,
+				028560E21F3E747800B2CE53 /* Background.jpeg in Resources */,
+				024B3ADC1F3EA7330090B79E /* Main.storyboard in Resources */,
+				025B25721F3F6F3E00C866D6 /* Safari Share Example.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		028560C11F3E72B100B2CE53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				028560C91F3E72B100B2CE53 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F8EE8D2A39F49B6D99E6517 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Share Extension/Pods-Share Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A29E55C01018A5A4AD208CAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFBE038F8F709EAAC78BDC2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B13901B37EA277EC0AB98FA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Collated/Pods-Collated-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E446A7A538B2DCA7C9C052E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Collated/Pods-Collated-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		028560A61F3E71F000B2CE53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				028560B01F3E71F000B2CE53 /* ViewController.swift in Sources */,
+				028560DF1F3E740C00B2CE53 /* CollatedClient.swift in Sources */,
+				028560D91F3E73DC00B2CE53 /* AuthenticationCompletedViewController.swift in Sources */,
+				028560DA1F3E73DC00B2CE53 /* AuthenticationViewController.swift in Sources */,
 				028560AE1F3E71F000B2CE53 /* AppDelegate.swift in Sources */,
+				028560DB1F3E73DC00B2CE53 /* InitialViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		028560BF1F3E72B100B2CE53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				028560E31F3E749800B2CE53 /* CollatedClient.swift in Sources */,
+				028560C61F3E72B100B2CE53 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		028560B11F3E71F000B2CE53 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				028560B21F3E71F000B2CE53 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		028560CC1F3E72B100B2CE53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 028560C21F3E72B100B2CE53 /* Share Extension */;
+			targetProxy = 028560CB1F3E72B100B2CE53 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		028560B61F3E71F000B2CE53 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				028560B71F3E71F000B2CE53 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		028560C71F3E72B100B2CE53 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				028560C81F3E72B100B2CE53 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -205,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -261,27 +557,65 @@
 		};
 		028560BD1F3E71F000B2CE53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B3BF11A6E179B77EAA5C7A1 /* Pods-Collated.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Collated/Collated.entitlements;
 				DEVELOPMENT_TEAM = KQQJ9HW7KF;
 				INFOPLIST_FILE = Collated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.collated.Collated;
+				PRODUCT_BUNDLE_IDENTIFIER = net.collated.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		028560BE1F3E71F000B2CE53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 355BF332DA103F5A253C628C /* Pods-Collated.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Collated/Collated.entitlements;
 				DEVELOPMENT_TEAM = KQQJ9HW7KF;
 				INFOPLIST_FILE = Collated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.collated.Collated;
+				PRODUCT_BUNDLE_IDENTIFIER = net.collated.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		028560CF1F3E72B100B2CE53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D26852F9D4EAE3FDCF575EB9 /* Pods-Share Extension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Share Extension/Share Extension.entitlements";
+				DEVELOPMENT_TEAM = KQQJ9HW7KF;
+				INFOPLIST_FILE = "Share Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.collated.ios.share-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		028560D01F3E72B100B2CE53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02BB558C06A245E3BAD588DF /* Pods-Share Extension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Share Extension/Share Extension.entitlements";
+				DEVELOPMENT_TEAM = KQQJ9HW7KF;
+				INFOPLIST_FILE = "Share Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.collated.ios.share-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -304,6 +638,16 @@
 				028560BE1F3E71F000B2CE53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		028560CE1F3E72B100B2CE53 /* Build configuration list for PBXNativeTarget "Share Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				028560CF1F3E72B100B2CE53 /* Debug */,
+				028560D01F3E72B100B2CE53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
