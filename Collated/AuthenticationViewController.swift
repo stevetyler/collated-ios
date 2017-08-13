@@ -1,6 +1,6 @@
 //
 //  AuthenticationViewController.swift
-//  Collated-Share
+//  Collated
 //
 //  Created by Miles Dunne on 10/08/2017.
 //  Copyright © 2017 Collated Services Ltd. All rights reserved.
@@ -48,6 +48,24 @@ class AuthenticationViewController: UIViewController, WKScriptMessageHandler, WK
         guard let url = authenticationURL else { return }
         webView.load(URLRequest(url: url))
     }
+    
+    /// Presents an error within a `UIAlertController`.
+    func handleError(_ error: Error) {
+        let action = UIAlertAction(
+            title: "OK",
+            style: .default) { (_) in
+                self.dismiss(animated: true)
+        }
+        
+        let alertController = UIAlertController(
+            title: "Authentication Failed",
+            message: error.localizedDescription,
+            preferredStyle: .alert)
+        
+        alertController.addAction(action)
+        
+        present(alertController, animated: true)
+    }
 
     // MARK: - Interface Builder Actions
     
@@ -78,5 +96,13 @@ class AuthenticationViewController: UIViewController, WKScriptMessageHandler, WK
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         navigationItem.title = nil
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        handleError(error)
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        handleError(error)
     }
 }

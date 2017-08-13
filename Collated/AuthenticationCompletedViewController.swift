@@ -1,6 +1,6 @@
 //
 //  AuthenticationCompletedViewController.swift
-//  Collated-Share
+//  Collated
 //
 //  Created by Miles Dunne on 11/08/2017.
 //  Copyright © 2017 Collated Services Ltd. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  CollatedClient.swift
-//  Collated-Share
+//  Collated
 //
 //  Created by Miles Dunne on 10/08/2017.
 //  Copyright © 2017 Collated Services Ltd. All rights reserved.
