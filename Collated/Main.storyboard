@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TAw-Cj-Qnj">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,12 +13,12 @@
         <scene sceneID="T0B-Yy-9yR">
             <objects>
                 <navigationController id="OYZ-Hz-fLp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="OUa-4h-TpQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="OUa-4h-TpQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -27,55 +27,46 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ml3-Zm-qdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="916"/>
+            <point key="canvasLocation" x="1200" y="865"/>
         </scene>
-        <!--collated-->
+        <!--Share Tutorial View Controller-->
         <scene sceneID="ttA-Aj-4Rn">
             <objects>
-                <viewController id="UDX-Bd-Lu3" customClass="AuthenticationCompletedViewController" customModule="Collated" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UDX-Bd-Lu3" customClass="ShareTutorialViewController" customModule="Collated" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Wn-Iw-NFO"/>
                         <viewControllerLayoutGuide type="bottom" id="2MT-BZ-It5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h4r-3E-vmh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPp-JI-r8w">
-                                <rect key="frame" x="130" y="518" width="60" height="30"/>
-                                <state key="normal" title="Sign Out">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signOutAction:" destination="UDX-Bd-Lu3" eventType="touchUpInside" id="Ilo-Kg-bdW"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can now share links to collated from the share menu within Safari." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzG-xp-JS5">
-                                <rect key="frame" x="20" y="148.5" width="280" height="20.5"/>
+                                <rect key="frame" x="20" y="116.5" width="280" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Connected!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-eZ-erv">
-                                <rect key="frame" x="52.5" y="111.5" width="215.5" height="29"/>
+                                <rect key="frame" x="52.5" y="79.5" width="215.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari Share Example.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBH-vE-vFt">
-                                <rect key="frame" x="20" y="177" width="280" height="50"/>
+                                <rect key="frame" x="20" y="145" width="280" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Csg-ZO-03n"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: If Collated isn't visible, you may need to enable it through the &quot;More&quot; menu." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA3-Px-R5c">
-                                <rect key="frame" x="20" y="257" width="280" height="54"/>
+                                <rect key="frame" x="20" y="225" width="280" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari More Option.png" translatesAutoresizingMaskIntoConstraints="NO" id="FEy-ON-PhC">
-                                <rect key="frame" x="20" y="319" width="280" height="100"/>
+                                <rect key="frame" x="20" y="287" width="280" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="rXZ-Ca-gid"/>
                                 </constraints>
@@ -88,7 +79,6 @@
                             <constraint firstItem="rBH-vE-vFt" firstAttribute="leading" secondItem="h4r-3E-vmh" secondAttribute="leading" constant="20" symbolic="YES" id="Ad1-2T-l2h"/>
                             <constraint firstItem="rBH-vE-vFt" firstAttribute="centerX" secondItem="h4r-3E-vmh" secondAttribute="centerX" id="CWt-yd-zYO"/>
                             <constraint firstItem="kA3-Px-R5c" firstAttribute="top" secondItem="rBH-vE-vFt" secondAttribute="bottom" constant="30" id="GeL-7D-1cZ"/>
-                            <constraint firstAttribute="bottom" secondItem="jPp-JI-r8w" secondAttribute="bottom" constant="20" symbolic="YES" id="PXj-ck-lxp"/>
                             <constraint firstAttribute="trailing" secondItem="rBH-vE-vFt" secondAttribute="trailing" constant="20" symbolic="YES" id="TrH-FY-1HK"/>
                             <constraint firstAttribute="trailing" secondItem="kA3-Px-R5c" secondAttribute="trailing" constant="20" symbolic="YES" id="U6T-sm-WTs"/>
                             <constraint firstItem="WzG-xp-JS5" firstAttribute="top" secondItem="jHZ-eZ-erv" secondAttribute="bottom" constant="8" symbolic="YES" id="Vg4-OG-C1n"/>
@@ -99,195 +89,34 @@
                             <constraint firstItem="WzG-xp-JS5" firstAttribute="centerX" secondItem="h4r-3E-vmh" secondAttribute="centerX" id="llY-2C-zff"/>
                             <constraint firstItem="kA3-Px-R5c" firstAttribute="leading" secondItem="h4r-3E-vmh" secondAttribute="leading" constant="20" symbolic="YES" id="qn4-a6-odh"/>
                             <constraint firstItem="rBH-vE-vFt" firstAttribute="top" secondItem="WzG-xp-JS5" secondAttribute="bottom" constant="8" symbolic="YES" id="sHB-XH-d7R"/>
-                            <constraint firstItem="jPp-JI-r8w" firstAttribute="centerX" secondItem="h4r-3E-vmh" secondAttribute="centerX" id="toM-vO-5wG"/>
                             <constraint firstItem="jHZ-eZ-erv" firstAttribute="centerX" secondItem="h4r-3E-vmh" secondAttribute="centerX" id="zxN-Qc-OUT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="collated" id="rRl-b2-2W4"/>
+                    <navigationItem key="navigationItem" id="rRl-b2-2W4">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="iWL-uw-UrO">
+                            <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="dismissAction:" destination="UDX-Bd-Lu3" id="53v-bF-dxD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L2K-h6-yNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399.375" y="915.84507042253517"/>
-        </scene>
-        <!--Initial View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="Collated" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="C0U-AA-YqG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CbX-Rc-44b">
-                                <rect key="frame" x="20" y="498" width="280" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="AVg-2o-yGT"/>
-                                </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Sign in with ">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" metaFont="system" size="15"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Slack">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
-                                                <real key="NSKern" value="0.0"/>
-                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="TAw-Cj-Qnj" kind="presentation" id="17X-sp-Cyd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pyo-d1-V9b">
-                                <rect key="frame" x="20" y="440" width="280" height="50"/>
-                                <color key="backgroundColor" red="0.29019607843137252" green="0.40000000000000002" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ahx-3R-mC0"/>
-                                </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Sign in with ">
-                                            <attributes>
-                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" metaFont="system" size="15"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Facebook">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
-                                                <real key="NSKern" value="0.0"/>
-                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="TAw-Cj-Qnj" kind="presentation" id="6DC-bI-Le8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odc-En-Xk4">
-                                <rect key="frame" x="20" y="382" width="280" height="50"/>
-                                <color key="backgroundColor" red="0.11372549019607843" green="0.63137254901960782" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="P4J-eq-d3R"/>
-                                </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Sign in with ">
-                                            <attributes>
-                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="15" name=".AppleSystemUIFont"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Twitter">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
-                                                <real key="NSKern" value="0.0"/>
-                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="TAw-Cj-Qnj" kind="presentation" id="QL8-I7-72O"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmE-Yc-P0u">
-                                <rect key="frame" x="20" y="28" width="280" height="346"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Welcome to">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="Helvetica-Light"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="18" name="Helvetica-Light"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="collated">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="36" name="Courier"/>
-                                            <real key="NSKern" value="3.6000000000000001"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineHeightMultiple="1.2" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="qmE-Yc-P0u" firstAttribute="leading" secondItem="odc-En-Xk4" secondAttribute="leading" id="3an-Ha-2N0"/>
-                            <constraint firstItem="qmE-Yc-P0u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7Jy-oK-cf6"/>
-                            <constraint firstItem="qmE-Yc-P0u" firstAttribute="trailing" secondItem="odc-En-Xk4" secondAttribute="trailing" id="B2c-Nr-KzW"/>
-                            <constraint firstItem="C0U-AA-YqG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EZ1-l2-hVP"/>
-                            <constraint firstAttribute="trailing" secondItem="pyo-d1-V9b" secondAttribute="trailing" constant="20" symbolic="YES" id="Gwr-D4-E85"/>
-                            <constraint firstItem="C0U-AA-YqG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IBq-YD-1W6"/>
-                            <constraint firstAttribute="trailing" secondItem="CbX-Rc-44b" secondAttribute="trailing" constant="20" symbolic="YES" id="JUz-94-2eK"/>
-                            <constraint firstItem="pyo-d1-V9b" firstAttribute="top" secondItem="odc-En-Xk4" secondAttribute="bottom" constant="8" symbolic="YES" id="KH5-oM-ctD"/>
-                            <constraint firstItem="CbX-Rc-44b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="Tbz-Ai-ATn"/>
-                            <constraint firstAttribute="trailing" secondItem="odc-En-Xk4" secondAttribute="trailing" constant="20" symbolic="YES" id="WSK-1c-tW8"/>
-                            <constraint firstItem="CbX-Rc-44b" firstAttribute="top" secondItem="pyo-d1-V9b" secondAttribute="bottom" constant="8" symbolic="YES" id="YBm-WD-u6n"/>
-                            <constraint firstItem="C0U-AA-YqG" firstAttribute="centerX" secondItem="qmE-Yc-P0u" secondAttribute="centerX" id="ami-w7-DfE"/>
-                            <constraint firstItem="odc-En-Xk4" firstAttribute="top" secondItem="qmE-Yc-P0u" secondAttribute="bottom" constant="8" symbolic="YES" id="leq-la-uSj"/>
-                            <constraint firstAttribute="bottom" secondItem="CbX-Rc-44b" secondAttribute="bottom" constant="20" symbolic="YES" id="o0x-SM-l06"/>
-                            <constraint firstItem="C0U-AA-YqG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="o8B-mA-GZg"/>
-                            <constraint firstItem="pyo-d1-V9b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="u1m-x9-gKI"/>
-                            <constraint firstItem="CbX-Rc-44b" firstAttribute="top" secondItem="pyo-d1-V9b" secondAttribute="bottom" constant="8" symbolic="YES" id="uvH-b0-4jl"/>
-                            <constraint firstItem="odc-En-Xk4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="z4S-hO-8Aa"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="kdB-by-jNd"/>
-                    <connections>
-                        <segue destination="OYZ-Hz-fLp" kind="show" identifier="authenticationCompleted" id="WON-o3-1Uo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-397.5" y="140.49295774647888"/>
+            <point key="canvasLocation" x="2001" y="866"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hMx-cF-5x8">
             <objects>
                 <navigationController id="TAw-Cj-Qnj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="7Xu-3C-crC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="7Xu-3C-crC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.92549019607843142" green="0.92156862745098034" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="D0G-vv-WRz" kind="relationship" relationship="rootViewController" id="2Il-Mt-baH"/>
@@ -295,41 +124,32 @@ Cg
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csR-q6-KCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403" y="140"/>
+            <point key="canvasLocation" x="1200" y="130"/>
         </scene>
-        <!--Authentication View Controller-->
+        <!--collated-->
         <scene sceneID="Wba-hw-8nT">
             <objects>
-                <viewController id="D0G-vv-WRz" customClass="AuthenticationViewController" customModule="Collated" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="D0G-vv-WRz" customClass="WebViewController" customModule="Collated" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e44-KP-oyY"/>
                         <viewControllerLayoutGuide type="bottom" id="fyy-Ad-ani"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zve-zf-5pT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jSF-7B-aTL">
-                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="40K-0K-zAY">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="dismissAction:" destination="D0G-vv-WRz" id="6rl-px-kfq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="collated" id="jSF-7B-aTL"/>
+                    <connections>
+                        <segue destination="OYZ-Hz-fLp" kind="presentation" identifier="showShareTutorial" id="Ul1-ys-8eX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02v-zD-0Xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202" y="140"/>
+            <point key="canvasLocation" x="2001" y="130"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Background.jpeg" width="827" height="1280"/>
         <image name="Safari More Option.png" width="718" height="260"/>
         <image name="Safari Share Example.png" width="750" height="90"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="QL8-I7-72O"/>
-    </inferredMetricsTieBreakers>
 </document>

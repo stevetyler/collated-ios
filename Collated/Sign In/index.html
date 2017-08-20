@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Sign In</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <style>
+    * {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      background-image: url("background.jpeg");
+      -webkit-backdrop-filter: blur(6px) brightness(60%);
+      background-size: cover;
+      margin: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      padding: 1rem;
+      text-align: center;
+      font-family: -apple-system;
+      color: #FFF;
+      width: 100%;
+    }
+
+    .twitter {
+      color: #FFF;
+      background-color: #1DA1F2;
+    }
+
+    .facebook {
+      color: #FFF;
+      background-color: #4A669F;
+    }
+
+    .slack {
+      color: #000000;
+      background-color: #FFF;
+    }
+
+    .login-button {
+      text-decoration: none;
+      padding: 16px;
+      margin-bottom: 16px;
+      width: 256px;
+      align-self: center;
+    }
+
+    .login-button:last-child {
+      margin-bottom: 0;
+    }
+
+    .login-buttons {
+      margin-top: 64px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .welcome {
+      margin-bottom: 0;
+      font-size: 48px;
+      font-weight: 200;
+    }
+
+    .instruction {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  </style>
+
+  <script>
+    (function() {
+      // Disable scrolling
+      document.addEventListener("touchmove", function(e) {
+        e.preventDefault();
+      });
+    }());
+  </script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <p class="welcome">Welcome</p>
+    <p class="instruction">Please sign in to continue</p>
+
+    <div class="login-buttons">
+      <a href="https://app.collated.net/api/users/auth/twitter-ios" class="twitter login-button">Sign in with <b>Twitter</b></a>
+      <a href="https://app.collated.net/api/users/auth/facebook-ios" class="facebook login-button">Sign in with <b>Facebook</b></a>
+      <a href="https://app.collated.net/api/users/auth/slack-ios" class="slack login-button">Sign in with <b>Slack</b></a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -32,6 +32,8 @@ class CollatedClient {
         set {
             if let newValue = newValue {
                 keychain.set(newValue, forKey: tokenKey)
+                authenticationDelegate?
+                    .authenticationDidComplete(withToken: newValue)
             } else {
                 keychain.delete(tokenKey)
             }
@@ -42,6 +44,10 @@ class CollatedClient {
     var isAuthenticated: Bool {
         return token != nil
     }
+    
+    // MARK: - Authentication Delegate
+    
+    var authenticationDelegate: CollatedClientAuthenticationDelegate?
     
     // MARK: - General
     
@@ -54,7 +60,12 @@ class CollatedClient {
         return configuration
     }
     
-    /// Submits the specified `url` and `title` to the web API.
+    /// Submits the specified URL and title to the web API, using a background
+    /// upload task.
+    ///
+    /// - Parameters:
+    ///   - url: The URL of the submission.
+    ///   - title: The title of the submission.
     func submit(url: String, title: String) {
         guard let token = token else {
             NSLog("Submission failed: A token is required.")
@@ -87,3 +98,14 @@ class CollatedClient {
     }
     
 }
+
+protocol CollatedClientAuthenticationDelegate {
+    
+    /// The delegate method which is called when the application receives a
+    /// new API token.
+    ///
+    /// - Parameter token: The new API token.
+    func authenticationDidComplete(withToken token: String)
+    
+}
+
