@@ -107,6 +107,26 @@ class WebViewController: UIViewController {
         }
     }
     
+    /// Determines whether the supplied URL is allowed to be loaded in the web
+    /// view. Only the collated site and sign in page should be allowed,
+    /// however an exception must be made for the sign in page authentication
+    /// links which should not be allowed to load in the web view.
+    ///
+    /// - Parameter navigationURL: The URL to be navigated to.
+    /// - Returns: `true` if the URL is permitted in the web view.
+    func isPermittedURL(_ navigationURL: URL) -> Bool {
+        if navigationURL.absoluteString.hasPrefix(collatedSiteURLString) {
+            if let currentURL = webView.url, currentURL.isFileURL {
+                // Prevent sign in page links from being opened in the web view
+                return false
+            }
+            // Allow all app.collated.net links
+            return true
+        }
+        // Allow all local file URLs such as the sign in page
+        return navigationURL.isFileURL
+    }
+    
     // MARK: - UIBarButtonItems
     
     lazy var menuBarButtonItem: UIBarButtonItem = {
@@ -203,6 +223,12 @@ class WebViewController: UIViewController {
     ///
     /// - Parameter url: The URL to load.
     func presentSafariViewController(forURL url: URL) {
+        guard let scheme = url.scheme,
+            scheme == "https" || scheme == "http" else {
+                NSLog("SFSafariViewController cannot open URL: \(url)")
+                return
+        }
+        
         let safariViewController = SFSafariViewController(url: url)
         
         if #available(iOS 10.0, *),
@@ -228,14 +254,12 @@ extension WebViewController: WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        guard let url = navigationAction.request.url,
-            navigationAction.navigationType == .linkActivated else {
-                decisionHandler(.allow)
-                return
+        if let url = navigationAction.request.url, !isPermittedURL(url) {
+            presentSafariViewController(forURL: url)
+            decisionHandler(.cancel)
+        } else {
+            decisionHandler(.allow)
         }
-        
-        presentSafariViewController(forURL: url)
-        decisionHandler(.cancel)
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
