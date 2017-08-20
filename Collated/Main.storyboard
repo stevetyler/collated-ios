@@ -10,102 +10,6 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="T0B-Yy-9yR">
-            <objects>
-                <navigationController id="OYZ-Hz-fLp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="OUa-4h-TpQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="UDX-Bd-Lu3" kind="relationship" relationship="rootViewController" id="bKY-cl-NaB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ml3-Zm-qdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1200" y="865"/>
-        </scene>
-        <!--Share Tutorial View Controller-->
-        <scene sceneID="ttA-Aj-4Rn">
-            <objects>
-                <viewController id="UDX-Bd-Lu3" customClass="ShareTutorialViewController" customModule="Collated" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Wn-Iw-NFO"/>
-                        <viewControllerLayoutGuide type="bottom" id="2MT-BZ-It5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="h4r-3E-vmh">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can now share links to collated from the share menu within Safari." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzG-xp-JS5">
-                                <rect key="frame" x="20" y="116.5" width="280" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Connected!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-eZ-erv">
-                                <rect key="frame" x="52.5" y="79.5" width="215.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari Share Example.png" translatesAutoresizingMaskIntoConstraints="NO" id="rBH-vE-vFt">
-                                <rect key="frame" x="20" y="145" width="280" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Csg-ZO-03n"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: If Collated isn't visible, you may need to enable it through the &quot;More&quot; menu." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA3-Px-R5c">
-                                <rect key="frame" x="20" y="225" width="280" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Safari More Option.png" translatesAutoresizingMaskIntoConstraints="NO" id="FEy-ON-PhC">
-                                <rect key="frame" x="20" y="287" width="280" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="rXZ-Ca-gid"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.92549019607843142" green="0.92156862745098034" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="FEy-ON-PhC" firstAttribute="top" secondItem="kA3-Px-R5c" secondAttribute="bottom" constant="8" symbolic="YES" id="2uH-Cx-eHO"/>
-                            <constraint firstItem="FEy-ON-PhC" firstAttribute="leading" secondItem="h4r-3E-vmh" secondAttribute="leading" constant="20" symbolic="YES" id="4JS-Wm-JQf"/>
-                            <constraint firstItem="rBH-vE-vFt" firstAttribute="leading" secondItem="h4r-3E-vmh" secondAttribute="leading" constant="20" symbolic="YES" id="Ad1-2T-l2h"/>
-                            <constraint firstItem="rBH-vE-vFt" firstAttribute="centerX" secondItem="h4r-3E-vmh" secondAttribute="centerX" id="CWt-yd-zYO"/>
-                            <constraint firstItem="kA3-Px-R5c" firstAttribute="top" secondItem="rBH-vE-vFt" secondAttribute="bottom" constant="30" id="GeL-7D-1cZ"/>
-                            <constraint firstAttribute="trailing" secondItem="rBH-vE-vFt" secondAttribute="trailing" constant="20" symbolic="YES" id="TrH-FY-1HK"/>
-                            <constraint firstAttribute="trailing" secondItem="kA3-Px-R5c" secondAttribute="trailing" constant="20" symbolic="YES" id="U6T-sm-WTs"/>
-                            <constraint firstItem="WzG-xp-JS5" firstAttribute="top" secondItem="jHZ-eZ-erv" secondAttribute="bottom" constant="8" symbolic="YES" id="Vg4-OG-C1n"/>
-                            <constraint firstItem="kA3-Px-R5c" firstAttribute="centerY" secondItem="h4r-3E-vmh" secondAttribute="centerY" id="baN-Oa-dB4"/>
-                            <constraint firstAttribute="trailing" secondItem="WzG-xp-JS5" secondAttribute="trailing" constant="20" symbolic="YES" id="dDp-kK-CIf"/>
-                            <constraint firstAttribute="trailing" secondItem="FEy-ON-PhC" secondAttribute="trailing" constant="20" symbolic="YES" id="got-JR-CMs"/>
-                            <constraint firstItem="WzG-xp-JS5" firstAttribute="leading" secondItem="h4r-3E-vmh" secondAttribute="leading" constant="20" symbolic="YES" id="l9x-WQ-lk8"/>
-                            <constraint firstItem="WzG-xp-JS5" firstAttribute="centerX" secondItem="h4r-3E-vmh" secondAttribute="centerX" id="llY-2C-zff"/>
-                            <constraint firstItem="kA3-Px-R5c" firstAttribute="leading" secondItem="h4r-3E-vmh" secondAttribute="leading" constant="20" symbolic="YES" id="qn4-a6-odh"/>
-                            <constraint firstItem="rBH-vE-vFt" firstAttribute="top" secondItem="WzG-xp-JS5" secondAttribute="bottom" constant="8" symbolic="YES" id="sHB-XH-d7R"/>
-                            <constraint firstItem="jHZ-eZ-erv" firstAttribute="centerX" secondItem="h4r-3E-vmh" secondAttribute="centerX" id="zxN-Qc-OUT"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="rRl-b2-2W4">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="iWL-uw-UrO">
-                            <color key="tintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="dismissAction:" destination="UDX-Bd-Lu3" id="53v-bF-dxD"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L2K-h6-yNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2001" y="866"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="hMx-cF-5x8">
             <objects>
                 <navigationController id="TAw-Cj-Qnj" sceneMemberID="viewController">
@@ -139,17 +43,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                     <navigationItem key="navigationItem" title="collated" id="jSF-7B-aTL"/>
-                    <connections>
-                        <segue destination="OYZ-Hz-fLp" kind="presentation" identifier="showShareTutorial" id="Ul1-ys-8eX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02v-zD-0Xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2001" y="130"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Safari More Option.png" width="718" height="260"/>
-        <image name="Safari Share Example.png" width="750" height="90"/>
-    </resources>
 </document>

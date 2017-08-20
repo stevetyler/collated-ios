@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		024B3ADC1F3EA7330090B79E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024B3ADB1F3EA7330090B79E /* Main.storyboard */; };
-		025B25721F3F6F3E00C866D6 /* Safari Share Example.png in Resources */ = {isa = PBXBuildFile; fileRef = 025B25711F3F6F3E00C866D6 /* Safari Share Example.png */; };
 		028560AE1F3E71F000B2CE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560AD1F3E71F000B2CE53 /* AppDelegate.swift */; };
 		028560B51F3E71F000B2CE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028560B41F3E71F000B2CE53 /* Assets.xcassets */; };
 		028560B81F3E71F000B2CE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028560B61F3E71F000B2CE53 /* LaunchScreen.storyboard */; };
@@ -17,9 +16,7 @@
 		028560CD1F3E72B100B2CE53 /* Share Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 028560C31F3E72B100B2CE53 /* Share Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		028560DF1F3E740C00B2CE53 /* CollatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560DE1F3E740C00B2CE53 /* CollatedClient.swift */; };
 		028560E31F3E749800B2CE53 /* CollatedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028560DE1F3E740C00B2CE53 /* CollatedClient.swift */; };
-		02A35B151F408E6B00F4D826 /* Safari More Option.png in Resources */ = {isa = PBXBuildFile; fileRef = 02A35B141F408E6A00F4D826 /* Safari More Option.png */; };
 		02B41F8B1F40D7B800AAF12C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B41F8A1F40D7B800AAF12C /* WebViewController.swift */; };
-		02B41F8D1F40E0C200AAF12C /* ShareTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B41F8C1F40E0C200AAF12C /* ShareTutorialViewController.swift */; };
 		02B41FB51F41511E00AAF12C /* CollatedUserScript.js in Resources */ = {isa = PBXBuildFile; fileRef = 02B41FB41F41511E00AAF12C /* CollatedUserScript.js */; };
 		02FCCC381F487A440048CAB3 /* Sign In in Resources */ = {isa = PBXBuildFile; fileRef = 02FCCC371F487A440048CAB3 /* Sign In */; };
 		30F6D7D8326053D3E9B00236 /* Pods_Share_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E700611B4709CC3AEF5B16A /* Pods_Share_Extension.framework */; };
@@ -52,7 +49,6 @@
 
 /* Begin PBXFileReference section */
 		024B3ADB1F3EA7330090B79E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		025B25711F3F6F3E00C866D6 /* Safari Share Example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Safari Share Example.png"; sourceTree = "<group>"; };
 		028560AA1F3E71F000B2CE53 /* Collated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028560AD1F3E71F000B2CE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		028560B41F3E71F000B2CE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,9 +61,7 @@
 		028560D21F3E72CB00B2CE53 /* Share Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Share Extension.entitlements"; sourceTree = "<group>"; };
 		028560D31F3E72D700B2CE53 /* Collated.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Collated.entitlements; sourceTree = "<group>"; };
 		028560DE1F3E740C00B2CE53 /* CollatedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollatedClient.swift; sourceTree = "<group>"; };
-		02A35B141F408E6A00F4D826 /* Safari More Option.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Safari More Option.png"; sourceTree = "<group>"; };
 		02B41F8A1F40D7B800AAF12C /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		02B41F8C1F40E0C200AAF12C /* ShareTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareTutorialViewController.swift; sourceTree = "<group>"; };
 		02B41FB41F41511E00AAF12C /* CollatedUserScript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CollatedUserScript.js; sourceTree = "<group>"; };
 		02BB558C06A245E3BAD588DF /* Pods-Share Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Share Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Share Extension/Pods-Share Extension.release.xcconfig"; sourceTree = "<group>"; };
 		02FCCC371F487A440048CAB3 /* Sign In */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Sign In"; sourceTree = "<group>"; };
@@ -152,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				02B41F8A1F40D7B800AAF12C /* WebViewController.swift */,
-				02B41F8C1F40E0C200AAF12C /* ShareTutorialViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -162,8 +155,6 @@
 			children = (
 				02FCCC371F487A440048CAB3 /* Sign In */,
 				02B41FB41F41511E00AAF12C /* CollatedUserScript.js */,
-				025B25711F3F6F3E00C866D6 /* Safari Share Example.png */,
-				02A35B141F408E6A00F4D826 /* Safari More Option.png */,
 				028560D31F3E72D700B2CE53 /* Collated.entitlements */,
 				028560B91F3E71F000B2CE53 /* Info.plist */,
 				028560B41F3E71F000B2CE53 /* Assets.xcassets */,
@@ -315,13 +306,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02A35B151F408E6B00F4D826 /* Safari More Option.png in Resources */,
 				02FCCC381F487A440048CAB3 /* Sign In in Resources */,
 				028560B81F3E71F000B2CE53 /* LaunchScreen.storyboard in Resources */,
 				028560B51F3E71F000B2CE53 /* Assets.xcassets in Resources */,
 				02B41FB51F41511E00AAF12C /* CollatedUserScript.js in Resources */,
 				024B3ADC1F3EA7330090B79E /* Main.storyboard in Resources */,
-				025B25721F3F6F3E00C866D6 /* Safari Share Example.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02B41F8D1F40E0C200AAF12C /* ShareTutorialViewController.swift in Sources */,
 				028560DF1F3E740C00B2CE53 /* CollatedClient.swift in Sources */,
 				02B41F8B1F40D7B800AAF12C /* WebViewController.swift in Sources */,
 				028560AE1F3E71F000B2CE53 /* AppDelegate.swift in Sources */,

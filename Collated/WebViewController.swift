@@ -255,8 +255,6 @@ extension WebViewController: CollatedClientAuthenticationDelegate {
         loadDefaultPage()
         
         safariViewController.dismiss(animated: true)
-        
-        performSegue(withIdentifier: "showShareTutorial", sender: nil)
     }
     
 }
