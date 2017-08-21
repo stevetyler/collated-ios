@@ -54,6 +54,16 @@ class WebViewController: UIViewController {
         webView.navigationDelegate = self
         webView.allowsLinkPreview = false
         
+        let edgePanGestureRecognizer = UIScreenEdgePanGestureRecognizer(
+            target: self, action: #selector(leftEdgePanAction))
+        edgePanGestureRecognizer.edges = [.left]
+        webView.addGestureRecognizer(edgePanGestureRecognizer)
+        
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(
+            target: self, action: #selector(leftSwipeAction))
+        swipeGestureRecognizer.direction = .left
+        webView.addGestureRecognizer(swipeGestureRecognizer)
+        
         return webView
     }()
     
@@ -125,6 +135,14 @@ class WebViewController: UIViewController {
         }
         // Allow all local file URLs such as the sign in page
         return navigationURL.isFileURL
+    }
+    
+    func leftEdgePanAction() {
+        webView.evaluateJavaScript("CollatedUserScript.showSidebar()")
+    }
+    
+    func leftSwipeAction() {
+        webView.evaluateJavaScript("CollatedUserScript.hideSidebar()")
     }
     
     // MARK: - UIBarButtonItems

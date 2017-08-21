@@ -6,12 +6,21 @@
     return;
   }
 
-  exports.toggleSidebar = function() {
-    var elements = document.getElementsByClassName("main-container");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].classList.toggle("move-right");
-    }
+  function getMainContainerElement() {
+    return document.getElementsByClassName("main-container")[0];
   }
+
+  exports.toggleSidebar = function() {
+    getMainContainerElement().classList.toggle("move-right");
+  };
+
+  exports.showSidebar = function() {
+    getMainContainerElement().classList.add("move-right");
+  };
+
+  exports.hideSidebar = function() {
+    getMainContainerElement().classList.remove("move-right");
+  };
 
   function injectStyle(style) {
     var styleElement = document.createElement("style");
