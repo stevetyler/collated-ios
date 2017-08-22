@@ -46,6 +46,7 @@ class WebViewController: UIViewController {
         
         let userContentController = WKUserContentController()
         userContentController.addUserScript(userScript)
+        userContentController.add(self, name: "shouldShowSidebarButton")
         
         let configuration = WKWebViewConfiguration()
         configuration.userContentController = userContentController
@@ -129,48 +130,43 @@ class WebViewController: UIViewController {
     
     // MARK: - UIBarButtonItems
     
-    lazy var menuBarButtonItem: UIBarButtonItem = {
+    lazy var sidebarButton: UIBarButtonItem = {
         return UIBarButtonItem(
-            image: UIImage(named: "MenuIcon"),
+            image: UIImage(named: "SidebarIcon"),
             style: .plain,
             target: self,
-            action: #selector(menuBarButtonAction))
+            action: #selector(sidebarButtonAction))
     }()
     
-    lazy var settingsBarButtonItem: UIBarButtonItem = {
+    lazy var signOutButton: UIBarButtonItem = {
         return UIBarButtonItem(
-            image: UIImage(named: "SettingsIcon"),
+            image: UIImage(named: "SignOutIcon"),
             style: .plain,
             target: self,
-            action: #selector(settingsBarButtonAction))
+            action: #selector(signOutButtonAction))
     }()
     
     /// Displays the appropriate `UIBarButtonItem`s in the navigation bar,
     /// with respect to the supplied URL.
     ///
     /// - Parameter url: The URL for which the
-    func updateNavigationBarButtonItems(for url: URL) {
+    func updateNavigationBarButtons(for url: URL) {
         let isCollatedSite = url.absoluteString
             .hasPrefix(collatedSiteURLString)
         
         navigationItem.setLeftBarButton(
-            isCollatedSite ? menuBarButtonItem : nil,
+            isCollatedSite ? sidebarButton : nil,
             animated: true)
         
         navigationItem.setRightBarButton(
-            isCollatedSite ? settingsBarButtonItem : nil,
+            isCollatedSite ? signOutButton : nil,
             animated: true)
     }
     
     // MARK: - UIBarButtonItem Actions
     
-    /// The `UIAlertController` containing settings actions.
-    lazy var settingsAlertController: UIAlertController = {
-        let controller = UIAlertController(
-            title: nil,
-            message: nil,
-            preferredStyle: .actionSheet)
-        
+    func signOutButtonAction() {
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let signOutAction = UIAlertAction(
             title: "Sign Out",
             style: .destructive) { (_) in
@@ -179,19 +175,18 @@ class WebViewController: UIViewController {
                     self.loadSignInPage()
                 }
         }
-        controller.addAction(signOutAction)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        controller.addAction(cancelAction)
+        let alertController = UIAlertController(
+            title: "Are you sure you want to sign out?",
+            message: nil,
+            preferredStyle: .alert)
+        alertController.addAction(cancelAction)
+        alertController.addAction(signOutAction)
         
-        return controller
-    }()
-    
-    func settingsBarButtonAction() {
-        present(settingsAlertController, animated: true)
+        present(alertController, animated: true)
     }
     
-    func menuBarButtonAction() {
+    func sidebarButtonAction() {
         webView.evaluateJavaScript("CollatedUserScript.toggleSidebar()")
     }
     
@@ -212,7 +207,6 @@ class WebViewController: UIViewController {
             title: "Failed to Load",
             message: error.localizedDescription,
             preferredStyle: .alert)
-        
         alertController.addAction(alertAction)
         
         present(alertController, animated: true)
@@ -263,7 +257,7 @@ extension WebViewController: WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        if let url = webView.url { updateNavigationBarButtonItems(for: url) }
+        if let url = webView.url { updateNavigationBarButtons(for: url) }
     }
     
 }
@@ -272,13 +266,27 @@ extension WebViewController: WKNavigationDelegate {
 extension WebViewController: CollatedClientAuthenticationDelegate {
     
     func authenticationDidComplete(withToken token: String) {
-        guard let safariViewController
-            = presentedViewController as? SFSafariViewController
-            else { return }
+        if let safariViewController = presentedViewController
+            as? SFSafariViewController {
+            safariViewController.dismiss(animated: true)
+        }
         
         loadDefaultPage()
+    }
+    
+}
+
+// MARK: - WKScriptMessageHandler
+extension WebViewController: WKScriptMessageHandler {
+    
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        guard message.name == "shouldShowSidebarButton",
+            let shouldShowSidebarButton = message.body as? Bool
+            else { return }
         
-        safariViewController.dismiss(animated: true)
+        navigationItem.setLeftBarButton(
+            shouldShowSidebarButton ? sidebarButton : nil,
+            animated: true)
     }
     
 }
