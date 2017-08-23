@@ -2,6 +2,7 @@
 
   "use strict";
 
+  // Only run the user script on app.collated.net
   if (!location.href.startsWith("https://app.collated.net/")) {
     return;
   }
@@ -11,7 +12,7 @@
     for (var i = 0; i < elements.length; i++) {
       elements[i].classList.toggle("move-right");
     }
-  }
+  };
 
   function injectStyle(style) {
     var styleElement = document.createElement("style");
@@ -19,12 +20,19 @@
     document.body.appendChild(styleElement);
   }
 
-  injectStyle(
-    "header { display: none; }" +
-    ".main-container { top: .3143rem; }"
-  );
+  function setup() {
+    injectStyle(
+      // Completely hide the navigation bar
+      "header { display: none; }" +
+      // Match .main-container top spacing to .is-bookmark
+      ".main-container { top: .3143rem; }"
+    );
 
-  document.querySelector("meta[name=viewport]").setAttribute("content",
-    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
+    // Disable zooming
+    document.querySelector("meta[name=viewport]").setAttribute("content",
+      "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
+  }
+
+  setup();
 
 }(this.CollatedUserScript = {}));
