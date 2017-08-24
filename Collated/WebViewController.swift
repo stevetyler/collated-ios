@@ -196,6 +196,9 @@ class WebViewController: UIViewController {
     ///
     /// - Parameter error: The error to display.
     func presentError(_ error: Error) {
+        // Ignore "user cancelled" errors
+        if (error as NSError).code == NSURLErrorCancelled { return }
+        
         let alertAction = UIAlertAction(
             title: "Retry",
             style: .default) { (_) in
