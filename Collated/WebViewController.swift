@@ -220,12 +220,6 @@ class WebViewController: UIViewController {
     ///
     /// - Parameter url: The URL to load.
     func presentSafariViewController(forURL url: URL) {
-        guard let scheme = url.scheme,
-            scheme == "https" || scheme == "http" else {
-                NSLog("SFSafariViewController cannot open URL: \(url)")
-                return
-        }
-        
         let safariViewController = SFSafariViewController(url: url)
         
         if #available(iOS 10.0, *),
@@ -252,7 +246,12 @@ extension WebViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let url = navigationAction.request.url, !isPermittedURL(url) {
-            presentSafariViewController(forURL: url)
+            if let scheme = url.scheme, scheme == "http" || scheme == "https" {
+                presentSafariViewController(forURL: url)
+            } else {
+                // Attempt to open the URL with a different application
+                UIApplication.shared.openURL(url)
+            }
             decisionHandler(.cancel)
         } else {
             decisionHandler(.allow)
