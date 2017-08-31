@@ -7,6 +7,7 @@ target 'Collated' do
 
   # Pods for Collated
   pod 'KeychainSwift'
+  pod 'SVProgressHUD'
 
 end
 

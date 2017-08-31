@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import SafariServices
+import SVProgressHUD
 
 class WebViewController: UIViewController {
     
@@ -24,6 +25,10 @@ class WebViewController: UIViewController {
         CollatedClient.shared.authenticationDelegate = self
         
         loadDefaultPage()
+        
+        // Configure progress HUD
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setDefaultAnimationType(.native)
     }
     
     // MARK: - Web View
@@ -258,8 +263,14 @@ extension WebViewController: WKNavigationDelegate {
         }
     }
     
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        // Show progress HUD, except on local pages
+        if let url = webView.url, !url.isFileURL { SVProgressHUD.show() }
+    }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if let url = webView.url { updateNavigationBarButtons(for: url) }
+        SVProgressHUD.dismiss()
     }
     
 }
