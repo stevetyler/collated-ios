@@ -133,6 +133,20 @@ class WebViewController: UIViewController {
         return navigationURL.isFileURL
     }
     
+    /// Logs an error and presents it to the user.
+    ///
+    /// - Parameter error: The error to handle.
+    func handleError(_ error: NSError) {
+        // Ignore "load cancelled" errors
+        if error.code != NSURLErrorCancelled {
+            NSLog("A webView error occurred: %@", error)
+            
+            SVProgressHUD.dismiss(completion: {
+                self.presentError(error)
+            })
+        }
+    }
+    
     // MARK: - UIBarButtonItems
     
     lazy var sidebarButton: UIBarButtonItem = {
@@ -199,11 +213,8 @@ class WebViewController: UIViewController {
     
     /// Presents an error within a `UIAlertController`.
     ///
-    /// - Parameter error: The error to display.
+    /// - Parameter error: The error to present.
     func presentError(_ error: Error) {
-        // Ignore "user cancelled" errors
-        if (error as NSError).code == NSURLErrorCancelled { return }
-        
         let alertAction = UIAlertAction(
             title: "Retry",
             style: .default) { (_) in
@@ -242,11 +253,11 @@ class WebViewController: UIViewController {
 extension WebViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        presentError(error)
+        handleError(error as NSError)
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        presentError(error)
+        handleError(error as NSError)
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
