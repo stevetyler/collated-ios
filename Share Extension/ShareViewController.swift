@@ -21,28 +21,36 @@ class ShareViewController: SLComposeServiceViewController {
     // MARK: - SLComposeServiceViewController
     
     override func isContentValid() -> Bool {
-        return CollatedClient.shared.isAuthenticated && !contentText.isEmpty
+        return CollatedClient.shared.isAuthenticated
+            && !contentText.isEmpty
+            && urlItemProvider != nil
     }
     
     override func didSelectPost() {
-        guard let context = extensionContext,
-            let item = context.inputItems.first as? NSExtensionItem,
-            let itemProvider = item.attachments?.first as? NSItemProvider,
-            itemProvider.hasItemConformingToTypeIdentifier(kUTTypeURL as String)
-            else { return }
-        
-        itemProvider.loadItem(
+        urlItemProvider?.loadItem(
             forTypeIdentifier: kUTTypeURL as String,
-            completionHandler: { (url, error) -> Void in
-                
-                if let url = url as? URL {
+            completionHandler: { (item, error) -> Void in
+                if let url = item as? URL {
                     CollatedClient.shared.submit(
                         url: url.absoluteString,
                         title: self.contentText)
                 }
-                
-                context.completeRequest(returningItems: [])
+                super.didSelectPost()
         })
+    }
+    
+    // MARK: - General
+    
+    /// Returns the first `NSItemProvider` with an item conforming to the 
+    /// `kUTTypeURL` type identifier.
+    var urlItemProvider: NSItemProvider? {
+        guard let item = extensionContext?.inputItems.first as? NSExtensionItem,
+            let itemProviders = item.attachments as? [NSItemProvider]
+            else { return nil }
+        
+        return itemProviders.filter({
+            $0.hasItemConformingToTypeIdentifier(kUTTypeURL as String)
+        }).first
     }
     
 }
