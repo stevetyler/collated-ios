@@ -29,9 +29,32 @@ class WebViewController: UIViewController {
         // Configure progress HUD
         SVProgressHUD.setDefaultStyle(.dark)
         SVProgressHUD.setDefaultAnimationType(.native)
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(applicationDidBecomeActive(notification:)),
+            name: .UIApplicationDidBecomeActive,
+            object: nil)
+    }
+    
+    // MARK: - Notifications
+    
+    func applicationDidBecomeActive(notification: Notification) {
+        let minimumInterval = TimeInterval(4 * 60 * 60) // 4 hours (in seconds)
+        
+        guard let lastNavigationDate = lastNavigationDate,
+            // Check that the specified `minimumInterval` has passed
+            lastNavigationDate.addingTimeInterval(minimumInterval) < Date(),
+            CollatedClient.shared.isAuthenticated
+            else { return }
+        
+        loadDefaultPage()
     }
     
     // MARK: - Web View
+    
+    /// The date at which the last `webView` navigation finished.
+    var lastNavigationDate: Date?
     
     /// The web view, configured to inject the user script after the document
     /// finishes loading.
@@ -282,6 +305,7 @@ extension WebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         if let url = webView.url { updateNavigationBarButtons(for: url) }
         SVProgressHUD.dismiss()
+        lastNavigationDate = Date()
     }
     
 }
