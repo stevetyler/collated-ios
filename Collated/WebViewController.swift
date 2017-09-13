@@ -20,21 +20,26 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view = webView
-        
-        CollatedClient.shared.authenticationDelegate = self
-        
-        loadDefaultPage()
-        
         // Configure progress HUD
         SVProgressHUD.setDefaultStyle(.dark)
         SVProgressHUD.setDefaultAnimationType(.native)
+        if let backgroundColor = view.backgroundColor {
+            // Match background color for mask
+            SVProgressHUD.setBackgroundLayerColor(backgroundColor)
+            SVProgressHUD.setDefaultMaskType(.custom)
+            SVProgressHUD.setContainerView(webView)
+        }
         
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(applicationDidBecomeActive(notification:)),
             name: .UIApplicationDidBecomeActive,
             object: nil)
+        
+        CollatedClient.shared.authenticationDelegate = self
+        
+        view = webView
+        loadDefaultPage()
     }
     
     // MARK: - Notifications
