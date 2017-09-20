@@ -16,6 +16,8 @@ class ShareViewController: SLComposeServiceViewController {
     
     override func viewDidLoad() {
         placeholder = "Title"
+        navigationController?.navigationBar.topItem?
+            .rightBarButtonItem?.title = "Save"
     }
     
     // MARK: - SLComposeServiceViewController
