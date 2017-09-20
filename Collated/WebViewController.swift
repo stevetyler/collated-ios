@@ -30,6 +30,19 @@ class WebViewController: UIViewController {
             SVProgressHUD.setContainerView(webView)
         }
         
+        // Configure refresh control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(
+            self,
+            action: #selector(refreshControlAction(sender:)),
+            for: .valueChanged)
+        if #available(iOS 10.0, *) {
+            webView.scrollView.refreshControl = refreshControl
+        } else {
+            webView.scrollView.addSubview(refreshControl)
+            webView.scrollView.sendSubview(toBack: refreshControl)
+        }
+        
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(applicationDidBecomeActive(notification:)),
@@ -273,6 +286,12 @@ class WebViewController: UIViewController {
         }
         
         present(safariViewController, animated: true)
+    }
+    
+    // MARK: - Refresh Control
+    @objc func refreshControlAction(sender: UIRefreshControl) {
+        webView.evaluateJavaScript("CollatedUserScript.refresh()")
+        sender.endRefreshing()
     }
     
 }

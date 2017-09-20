@@ -14,6 +14,10 @@
     }
   };
 
+  exports.refresh = function() {
+    document.getElementById("refreshAppRoute").click();
+  };
+
   function injectStyle(style) {
     var styleElement = document.createElement("style");
     styleElement.innerHTML = style;
@@ -25,7 +29,9 @@
       // Completely hide the navigation bar
       "header { display: none; }" +
       // Match .main-container top spacing to .is-bookmark
-      ".main-container { top: .3143rem; }"
+      ".main-container { top: .3143rem; }" +
+      // Hide refresh button
+      "#refreshAppRoute { display: none; }"
     );
 
     // Disable zooming
